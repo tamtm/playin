@@ -6,17 +6,31 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <title> Tamtm's Basic Template </title>
   <link rel="stylesheet" href="css/style.css">
-
   <!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
-    <script src="bower_components/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  
+
 </head>
 <body>
-  <a href="#">this is link</a>
-  <button> this is a button</button>
-  <input type="button" value="another button"/>
-  <input type="text" value="this is an input">
-  <textarea name="" id="" cols="30" rows="10">This is textarea</textarea>
+  <form>
+    <input id="token" type="password" name="token">
+    <button type="button" onclick="saveToken()">Save token</button>
+  </form>
+  <br>
+  <!-- <a href="#">this is link</a> -->
+  <form action="">
+    <input id="filename" type="text">
+    <br>
+    <textarea id="post" cols="30" rows="10"></textarea>
+    <br>
+    <button onclick="upload()" type="button">Post</button>
+  </form>
+  <script type="module">
+    import { Octokit } from "https://esm.sh/@octokit/core";
+    window.Octokit = Octokit
+  </script>
+  <script type="text/javascript" src="js/main.js" defer></script>
 </body>
 </html>
