@@ -32,6 +32,10 @@ function upload() {
       headers: {
         'X-GitHub-Api-Version': '2022-11-28'
       }
+  }).then(function() {
+    console.log("posted")
+  }).catch(function(){
+    console.log("error")
   })
 }
 
